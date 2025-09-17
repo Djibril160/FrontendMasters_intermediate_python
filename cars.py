@@ -7,6 +7,12 @@ class Car:
     print("New car!")
     self.name = name
 
+  def __str__(self):
+    return f"My car {self.name} has {self.number_of_wheesl} wheels"
+  
+  def __repr__(self):
+    return f"My car {self.name} is on fire"
+
   def start(self, name):
     if self.runs:
       print(f"{name.capitalize()} car is started")
